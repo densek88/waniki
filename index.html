@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>WANIKI</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/png" href="images/logo.png">
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+	</style>
+</head>
+
+<body class="is-preload">
+	<header id="header">
+
+		<nav id="nav">
+			<ul>
+				<li><a href="#" id="wanikiBtn">MEET WANIKI</a></li>
+				<li><a href="#" id="wanikiBuyBtn">HOW TO BUY</a></li>
+				<li><a href="#" id="tokenomicsBtn">TOKENOMICS</a></li>
+			</ul>
+		</nav>
+		<div class="content">
+			<h1><a href="#">WANIKI</a></h1>
+			<p>In the deep sea lives Waniki, a magical sea dragon with <br>shimmering scales.She guards her underwater
+				<br>realm and controls the currents.</p>
+			<ul class="social-iconList">
+				<li><img src="images/twitter.png" id="twitter" class="img-icons" /></li>
+				<li><img src="images/tg.png" id="tg" class="img-icons" /></li>
+				<li><img src="images/dexscreener.png" id="dex" class="img-icons" /></li>
+			</ul>
+		</div>
+		</div>
+	</header>
+	<div id="wanikiModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<img src="images/waniki_modal.png" alt="Waniki">
+			<!-- Replace 'your-image.jpg' with the path to your image -->
+		</div>
+	</div>
+	<div id="buyModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<img src="images/waniki_buy.png" alt="Waniki">
+			<!-- Replace 'your-image.jpg' with the path to your image -->
+		</div>
+	</div>
+	<div id="tokenomicsModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<img src="images/Tokenomics.png" alt="Waniki">
+			<!-- Replace 'your-image.jpg' with the path to your image -->
+		</div>
+	</div>
+	
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+        // Get the modals
+        var modal = document.getElementById('wanikiModal');
+        var buyModal = document.getElementById('buyModal');
+        var tokenomicsModal = document.getElementById('tokenomicsModal');
+
+        // Get the buttons that open the modals
+        var aboutBtn = document.getElementById("wanikiBtn");
+        var buyBtn = document.getElementById("wanikiBuyBtn");
+        var tokenomicsBtn = document.getElementById("tokenomicsBtn");
+
+        // Get the <span> elements that close the modals
+        var span = document.getElementsByClassName("close");
+
+        // When the user clicks the "MEET WANIKI" button, open the "MEET WANIKI" modal
+        aboutBtn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks the "HOW TO BUY" button, open the "HOW TO BUY" modal
+        buyBtn.onclick = function () {
+            buyModal.style.display = "block";
+        }
+
+        // When the user clicks the "TOKENOMICS" button, open the "TOKENOMICS" modal
+        tokenomicsBtn.onclick = function () {
+            tokenomicsModal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        for (var i = 0; i < span.length; i++) {
+            span[i].onclick = function () {
+                modal.style.display = "none";
+                buyModal.style.display = "none";
+                tokenomicsModal.style.display = "none";
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal || event.target == buyModal || event.target == tokenomicsModal) {
+                modal.style.display = "none";
+                buyModal.style.display = "none";
+                tokenomicsModal.style.display = "none";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
