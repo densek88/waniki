@@ -49,7 +49,7 @@ document.getElementById("twitter").addEventListener("click", function() {
 });
 
 document.getElementById("tg").addEventListener("click", function() {
-    window.open("https://t.me/+X5arvYQd8WU3Yzkx", "_blank");
+    window.open("#",);
 });
 
 document.getElementById("dex").addEventListener("click", function() {
